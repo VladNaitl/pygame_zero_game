@@ -23,9 +23,12 @@ music.play('music')
 # Функция отрисовки меню
 def draw_menu():
     screen.clear()
+    screen.blit('background', (0, 0))
+    screen.draw.text("press 'SPACE' to choose", center=(WIDTH/2, 250), color="white", fontsize=20)
+    screen.draw.text("ASTEROIDS", center=(WIDTH/2, 135), color="grey", fontsize=60)
     for i, item in enumerate(menu_items):
         if i == selected_item:
-            screen.draw.text(item, center=(WIDTH/2, HEIGHT/2 + i * 50), color="yellow", fontsize=40)
+            screen.draw.text("> " + item, center=(WIDTH/2, HEIGHT/2 + i * 50), color="yellow", fontsize=40)
         else:
             screen.draw.text(item, center=(WIDTH/2, HEIGHT/2 + i * 50), color="white", fontsize=40)
 
